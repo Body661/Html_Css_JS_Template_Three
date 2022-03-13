@@ -60,18 +60,9 @@ a {
   z-index: 1;
   transition: var(--main-transition);
   text-transform: uppercase;
+  cursor:default;
 }
 .main-heading::before,
-.main-heading::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background-color: var(--main-color);
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-}
 .main-heading::after {
   content: "";
   position: absolute;
@@ -110,7 +101,7 @@ a {
   100% {
     left: 0;
     border-radius: 0;
-    width: 50%;
+    width: 51%;
     height: 100%;
   }
 }
@@ -123,7 +114,7 @@ a {
   100% {
     right: 0;
     border-radius: 0;
-    width: 50%;
+    width: 51%;
     height: 100%;
   }
 }
@@ -244,8 +235,8 @@ header .main-nav > li > a:hover::before {
   transition: var(--main-transition);
   left: 0;
 }
-header .main-nav > .other:hover .mega-menu{
-    display: flex;
+header .main-nav > .other:hover .mega-menu {
+  display: flex;
 }
 header .main-nav .mega-menu {
   position: absolute;
@@ -598,7 +589,7 @@ header .main-nav .mega-menu .links li a i {
   color: #f44036;
   border-color: #f44036;
   background: linear-gradient(to right, #f44036 50%, white 50%);
-  background-size: 200% 100%;
+  background-size: 200% 95%;
   background-position: right bottom;
 }
 .features .time .image-holder::before {
@@ -611,7 +602,7 @@ header .main-nav .mega-menu .links li a i {
   color: #009688;
   border-color: #009688;
   background: linear-gradient(to right, #009688 50%, white 50%);
-  background-size: 200% 100%;
+  background-size: 200% 95%;
   background-position: right bottom;
 }
 .features .passion .image-holder::before {
@@ -624,7 +615,7 @@ header .main-nav .mega-menu .links li a i {
   color: #03a9f4;
   border-color: #03a9f4;
   background: linear-gradient(to right, #03a9f4 50%, white 50%);
-  background-size: 200% 100%;
+  background-size: 200% 95%;
   background-position: right bottom;
 }
 .features .box:hover a {
@@ -878,17 +869,13 @@ header .main-nav .mega-menu .links li a i {
   height: 30px;
   background-color: #eee;
   position: relative;
-}
-.skills .our-skills .prog {
-  position: relative;
-  height: 30px;
   display: block;
 }
 .skills .our-skills .prog span {
-  content: "";
   background-color: var(--main-color);
   height: 100%;
   position: absolute;
+  transition: width 0.5s linear;
 }
 @media (max-width: 991px) {
   .skills .container img {
